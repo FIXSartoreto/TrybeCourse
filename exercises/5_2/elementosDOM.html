@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+    Adicione a tag div com a classe main-content como filho da tag body;
+    Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+    Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+    Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+    Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+    Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5;
+    Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+    Adicione 3 tags h3, todas sendo filhas do div criado no passo 2 
+    <script>
+      // Exercicio 1
+      let elementH1 = document.createElement("h1");
+      elementH1.innerHTML = "Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(elementH1);
+
+      // Exercicio 2
+      let elementoPrincipal = document.createElement("div");
+      elementoPrincipal.className ="main-content";
+      document.body.appendChild(elementoPrincipal);
+
+      // Exercicio 3
+      let elementoCentro = document.createElement("div");
+      elementoCentro.className = "center-content";
+      elementoPrincipal.appendChild(elementoCentro);
+
+      // Exercicio 4
+      let pCenter = document.createElement("p");
+      pCenter.innerHTML = "algum texto";
+      elementoCentro.appendChild(pCenter);
+
+      // Exercicio 5
+      let leftDiv = document.createElement("div");
+      leftDiv.className = "left-content";
+      elementoPrincipal.appendChild(leftDiv);
+
+      // Exercicio 6
+      let rightDiv = document.createElement("div");
+      rightDiv.className = "right-content";
+      elementoPrincipal.appendChild(rightDiv);
+
+      // Exercicio 7
+      let imagem = document.createElement("img");
+      imagem.className = "small-image";
+      imagem.src = "https://picsum.photos/200"
+      leftDiv.appendChild(imagem);
+
+      // Exercicio 8
+      let numbersList = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+      let listaRight = document.createElement("ul");
+      for (let i in numbersList){
+          let listaLI = document.createElement("li");
+          listaLI.innerHTML = numbersList[i];
+          listaRight.appendChild(listaLI);
+      }
+      rightDiv.appendChild(listaRight);
+
+      // Exercicio 9
+      for (let i = 1; i <= 3; i += 1){
+          let elementH3 = document.createElement("h3");
+          elementoPrincipal.appendChild(elementH3);
+      }
+
+      // Exercicio 1.1
+      elementH1.className = "title";
+
+      // Exercicio 1.2
+      h3Elements = document.querySelectorAll(".main-content h3");
+      for (i in h3Elements){
+        let classH3 = document.querySelectorAll(".main-content h3")[i];
+        classH3.className = "description";
+      }
+
+      // Exercicio 1.3
+       elementoPrincipal.removeChild(leftDiv);
+
+      // Exercicio 1.4
+      rightDiv.style.marginRight="auto";
+
+      // Exercicio 1.5
+      let trocaCor = document.querySelectorAll(".center-content")[0].parentNode;
+      trocaCor.style.backgroundColor = "green";
+
+      // Exercicio 1.6
+     
+      listaRight.removeChild(listaRight.lastChild);
+      listaRight.removeChild(listaRight.lastChild);
+      
+
+      
+    </script>
+  </body>
+</html>
