@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>CV - Curriculum Vitae</title>
+</head>
+<body>
+    <form class="myform">
+    <fieldset>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" maxlength="40" required="required"><br>
+            <label for="email-user">E-mail:</label>
+            <input type="email" name="email-user" id="email-user" maxlength="50" required="required"><br>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" maxlength="11" required="required"><br>
+            <label for="adress">Endereço:</label>
+            <input type="text" name="adress" id="adress" maxlength="200"><br>
+            <label for="city">Cidade:</label>
+            <input type="text" name="city" id="city" maxlength="28"><br>
+            <label for="estado">Estado</label>
+            <select name="estado" id="estado" class="state" required="required">
+            </select><br><br>
+            <p>Tipo</p>
+            <label for="casa">Casa</label>
+            <input type="radio" name="tipo" value="Casa" id="casa" required="required" class="radio">
+            <label for="apartamento">Apartamento</label>
+            <input type="radio" name="tipo" value="apartamento" id="apartamento" required="required" class="radio">
+            <br><br>
+    </fieldset>
+    <fieldset>
+        <label for="resumo">Resumo do Currículo</label>
+        <input name="resumo" type="textarea" maxlength="1000" required="required"><br><br>
+        <label for="cargo">Cargo</label>
+        <input type="text" name="cargo" id="cargo" maxlength="40" required="required"><br><br>
+        <label for="descricao">Descrição do Cargo</label>
+        <input type="text" name="descricao" id="descricao" maxlength="500" required="required"><br><br>
+        <label for="inicio">Data de Início</label>
+        <input type="date" name="inicio" id="inicio" required="required">
+    </fieldset>
+    <button type="submit" id="enviar">Enviar</button>
+    <button type="submit" id="limpar">Limpar</button>
+</form>
+
+
+
+    
+</body>
+</html>
