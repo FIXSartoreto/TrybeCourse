@@ -2,3 +2,7 @@ input {
     margin-bottom: 20px;
     width: 100%;    
 }
+
+fieldset {
+    margin-bottom: 20px;
+}

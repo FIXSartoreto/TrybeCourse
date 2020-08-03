@@ -8,7 +8,7 @@
     <title>CV - Curriculum Vitae</title>
 </head>
 <body>
-    <form>
+    <form class="myform">
     <fieldset>
             <label for="name">Nome:</label>
             <input type="text" name="name" id="name" maxlength="40" required="required"><br>
@@ -21,13 +21,13 @@
             <label for="city">Cidade:</label>
             <input type="text" name="city" id="city" maxlength="28"><br>
             <label for="estado">Estado</label>
-            <select name="estado" id="estado" class="state">
+            <select name="estado" id="estado" class="state" required="required">
             </select><br><br>
             <p>Tipo</p>
             <label for="casa">Casa</label>
-            <input type="radio" name="tipo" value="Casa" id="casa" required="required">
+            <input type="radio" name="tipo" value="Casa" id="casa" required="required" class="radio">
             <label for="apartamento">Apartamento</label>
-            <input type="radio" name="tipo" value="apartamento" id="apartamento" required="required">
+            <input type="radio" name="tipo" value="apartamento" id="apartamento" required="required" class="radio">
             <br><br>
     </fieldset>
     <fieldset>
@@ -38,9 +38,10 @@
         <label for="descricao">Descrição do Cargo</label>
         <input type="text" name="descricao" id="descricao" maxlength="500" required="required"><br><br>
         <label for="inicio">Data de Início</label>
-        <input type="date" name="inicio" id="inicio">
+        <input type="date" name="inicio" id="inicio" required="required">
     </fieldset>
-    <button type="submit" id="enviar" >Enviar</button> 
+    <button type="submit" id="enviar">Enviar</button>
+    <button type="submit" id="limpar">Limpar</button>
 </form>
 
 
