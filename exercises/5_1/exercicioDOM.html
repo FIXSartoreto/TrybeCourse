@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        
+        function changeText(){
+            let textoPrincipal = document.getElementsByTagName("p")[1];
+            textoPrincipal.innerHTML = "Feliz e realizado profissionalmente."
+        }
+
+        function changeColorSquare() {
+            let quadrado1 = document.getElementsByClassName("main-content")[0];
+            quadrado1.style.background = "green";
+        }
+
+        function changeColorRed() {
+            document.getElementsByClassName("center-content")[0].style.background = "white";
+        }
+
+        function textCorrect() {
+            document.getElementsByClassName("title")[0].innerHTML = "Exercício 5.1 - JavaScript"
+        }
+
+        function caseChange() {
+            let letraM = document.getElementsByTagName("p");
+            for (let i = 0; i < letraM.length; i += 1){
+                letraM[i].innerHTML = letraM[i].innerHTML.toUpperCase();
+            }
+        }
+
+        function logPs() {
+            let printP = document.getElementsByTagName("p");
+            for (let i = 0; i < printP.length; i += 1){
+                console.log(printP[i].innerHTML);
+            }
+        }
+    </script>
+  </body>
+</html>
