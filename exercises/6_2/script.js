@@ -12,7 +12,8 @@ window.onload = function() {
 
     let elemButton = document.getElementById('enviar');
     elemButton.addEventListener('click', function (event) {
-    event.preventDefault();   
+    event.preventDefault(); 
+    window.JustValidate(selectForm);
     createDiv(); 
     });
 
@@ -35,5 +36,7 @@ window.onload = function() {
         divField.appendChild(divConsolidado);
 
     }
+
+    document.getElementById('inicio').DatePickerX.init();
     
 }

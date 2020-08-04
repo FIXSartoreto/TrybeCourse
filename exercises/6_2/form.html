@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
     <title>CV - Curriculum Vitae</title>
 </head>
 <body>
@@ -11,9 +12,9 @@
     <form class="myform">
         <div class="form-group">
             <label for="name">Nome:</label>
-            <input type="text" name="name" id="name" maxlength="40" required="required" class="form-control">
+            <input data-validate-field="name"; type="text" name="name" id="name" maxlength="40" required="required" class="form-control">
             <label for="email-user">E-mail:</label>
-            <input class="form-control" type="email" name="email-user" id="email-user" maxlength="50" required="required"><br>
+            <input data-validate-field="email" class="form-control" type="email" name="email-user" id="email-user" maxlength="50" required="required"><br>
             <label for="cpf">CPF:</label>
             <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required="required"><br>
             <label for="adress">Endereço:</label>
@@ -51,8 +52,10 @@
 </form>
 
 <script src="script.js"></script>
-<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="dist/js/DatePickerX.min.js"></script>
+<script src="dist/js/just-validate.min.js"></script>
 
     
 </body>
