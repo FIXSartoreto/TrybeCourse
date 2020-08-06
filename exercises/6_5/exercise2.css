@@ -1,5 +1,4 @@
 html {
-    height: 100%;
     box-sizing: border-box;
   }
   *, *:before, *:after {
@@ -9,15 +8,26 @@ html {
   }
 
 @media screen and (max-width: 800px){
-    body {
-        margin: 20px;
+
+    header {
+        width: 100%;
+        background: grey;
+        padding: 5px 35px;      
     }
+
+    header p {
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+    }
+
     h1 {
         font-size: 1em;
     }
 
     p {
         font-size: 1.2em;
+        margin-top: 10px;
     }
 
     .container {
@@ -25,23 +35,37 @@ html {
         flex-direction: column;
     }
 
-    .aside-one {
+    .book-info {
         order: 1;
+        display: flex;
+        background: cadetblue;
+        padding: 10px 35px;
+    }
+
+    .aside-one {
         font-size: 0.8em;
+        width: 50%;
     }
 
     .aside-two {
-        order: 2;
         font-size: 0.8em;
+        width: 50%;
     }
 
-    .aside-two h2 {
-        font-size: 1em;
+    .main-content {
+        line-height: 1.5em;
+        padding: 10px 20px;
+    }
+
+    h2 {
+        margin-bottom: 5px;
     }
 
     footer {
-        order: 3;
+        order: 2;
         font-size: 0.7em;
+        background: grey;
+        padding: 10px;
     }
 
     footer h3 {
@@ -50,9 +74,6 @@ html {
 }
 
 @media screen and (min-width: 801px) and (max-width: 1300px) {
-    body {
-      
-    }
 
     header {
         width: 100%;
@@ -99,4 +120,56 @@ html {
         background: grey;
         padding: 5px;
     }
+}
+
+@media screen and (min-width: 1301px) {
+    body {
+        margin: 0px 60px;
+    }
+
+    header {
+        width: 100%;
+        background: grey;
+        text-align: center;
+    }
+    header p {
+        font-size: 1.8em;
+        padding: 10px;
+    }
+    footer {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        background: grey;
+        padding: 5px;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .box {
+        margin: 10px;
+    }
+
+    .book-info {
+        background: cadetblue;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+    }
+
+    .main-content {
+        padding: 0px 60px;
+        background: aquamarine;
+    }
+
+    .main-content h1 {
+        text-align: center;
+    }
+    .main-content p {
+        margin: 15px;
+        font-size: 20px;
+    }
+
 }
