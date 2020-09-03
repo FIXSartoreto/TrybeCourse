@@ -1,5 +1,13 @@
-const sum = (a, b) => a + b;
+const SumNumbers = (a, b, callback) => {
+  setTimeout(() => {
+    const result = a + b;
+    callback(result);
+  }, 500)
+}
 
-test('sums two values', () => {
-  expect(sum(2, 3)).toEqual(5);
-});
+test('Testando SumNumbers, soma 5 mais 10', done => {
+  SumNumbers(5, 10, (result) => {
+    expect(result).toBe(25);
+    done();
+  });
+})
