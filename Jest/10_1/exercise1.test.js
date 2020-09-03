@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 const arrays = [
     ["1", "2", "3"],
     [true],
@@ -12,4 +10,6 @@ function flatten() {
   return arrays.reduce((result, array) => result.concat(array), [])
 }
 
-assert.deepEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);
+test('concat array', () => {
+  expect(flatten()).toEqual(['1', '2', '3', true, 4, 5, 6]);
+});
