@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import './Form.css';
+import About from './About';
+import AboutYou from './AboutYou';
 
 class Form extends Component {
   constructor() {
@@ -29,15 +31,6 @@ class Form extends Component {
       <div>
         <h1>Fixação aula Forms!</h1>
         <form className="form">
-          <label>
-            Escolha alguma coisa legal:
-            <select name='coisas' value={this.state.coisas} onChange={this.handleChanges}>
-              <option>Coisa 1</option>
-              <option>Coisa 2</option>
-              <option>Coisa 3</option>
-              <option>Coisa 4</option>            
-            </select>
-          </label>
           <fieldset>
             <legend>All about you:</legend>
             <label>
@@ -48,10 +41,7 @@ class Form extends Component {
               Digite sua idade: 
               <input name='idade' type='number' value={this.state.idade} onChange={this.handleChanges} />
             </label>
-            <label>
-              Digite algo sobre vc:
-              <textarea name='sobre' value={this.state.sobre} onChange={this.handleChanges} />
-            </label>
+            <AboutYou value={this.handleChanges.sobre} handleChanges={this.handleChanges} />
             <label>
               Voce comparecerá?
               <input type='checkbox' name='comparecer' value={this.state.comparecer} onChange={this.handleChanges} />
@@ -60,7 +50,8 @@ class Form extends Component {
               Adicione uma foto sua:
               <input type='file' />
             </label>
-          </fieldset>
+        </fieldset>
+        <About value={this.handleChanges.coisas} handleChanges={this.handleChanges} />
         </form>
       </div>
     );
