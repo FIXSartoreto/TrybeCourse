@@ -1,0 +1,13 @@
+label {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input {
+  margin-left: 10px;
+}
+
+legend {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
